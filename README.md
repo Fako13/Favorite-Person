@@ -3,8 +3,7 @@
 
 ## Используемые технологии
 * [React](https://ru.reactjs.org/)
-* [Redux](https://redux.js.org/)
-* [Redux-Saga](https://redux-saga.js.org/)
+* [Redux-Toolkit](https://redux-toolkit.js.org/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [Netlify](https://www.netlify.com/)
 * [Styled-components](https://styled-components.com/)
