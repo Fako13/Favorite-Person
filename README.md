@@ -24,18 +24,22 @@
         |+ styles/                  - папка с глобальными стилями
     |+ components/                  - папка с компонентами
         |+ui                        - папка с компонентами дизайна (select, button, spinner...)
+        |*                          - папки с компонентами и их логикой (sign-in, cart-item...) 
     |+ routes/                      - папка настройки маршрутизации
         |+pages                     - папка со страницами 
         |+router.ts                 - файл настройки маршрутизации
-    |+ layout/                      - папка настройки маршрутизации
-        |+components                - папка с компонентом и его логикой (sign-in, cart-item...) 
+    |+ layout/                      - папка настройки общих оберток для страниц
+        |+header                    - папка header
+        |+footer                    - папка header
     |+ store/                       - папка для store 
+    |+ services/                    - папка для работы с services (базы данных, сторонные сервисы)
+    |+ hooks/                       - папка для работы с hooks (функции хелперы)
 |+ README.md                        - файл readme
 |- package.json                     - файл конфигурации проекта npm
 |- package-lock.json                - файл конфигурации проекта npm
 |+ .gitignore                       - файл с исключениями git
-|+ tsconfig.js                      - файл конфигурации TypeScript
-|+ webpack.config.js                - файл конфигурации Webpack
+|+ tsconfig.ts                      - файл конфигурации TypeScript
+|+ webpack.config.ts                - файл конфигурации Webpack
 |+ .env                             - файл констант 
 |+ .babelrc                         - файл конфигурации Babel 
 |+ .eslintrc.json                   - файл конфигурации Eslint 
