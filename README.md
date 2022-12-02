@@ -20,15 +20,17 @@
 |- node_modules/                    - папка с node-модулями
 |+ public/                          - папка для PWA и скелета приложения
 |+ src/                             - папка с исходниками
-    |+ assets/                      - папка с глобальными ресурсами
+    |+ assets/                      - папка со статическими ресурсами
         |+ fonts/                   - папка с шрифтами
         |+ styles/                  - папка с глобальными стилями
     |+ components/                  - папка с компонентами
         |+ui                        - папка с компонентами дизайна (select, button, spinner...)
-        |+screens                   - папка с компонентом и его логикой (sign-in, cart-item...)
-    |+ routes/                      - папка с страницами   
-    |+ store/                       - папка для redux store 
-    |+ utils/                       - папка для различных утилит 
+    |+ routes/                      - папка настройки маршрутизации
+        |+pages                     - папка со страницами 
+        |+router.ts                 - файл настройки маршрутизации
+    |+ layout/                      - папка настройки маршрутизации
+        |+components                - папка с компонентом и его логикой (sign-in, cart-item...) 
+    |+ store/                       - папка для store 
 |+ README.md                        - файл readme
 |- package.json                     - файл конфигурации проекта npm
 |- package-lock.json                - файл конфигурации проекта npm
@@ -37,5 +39,7 @@
 |+ webpack.config.js                - файл конфигурации Webpack
 |+ .env                             - файл констант 
 |+ .babelrc                         - файл конфигурации Babel 
+|+ .eslintrc.json                   - файл конфигурации Eslint 
+|+ .prettierrc                      - файл конфигурации Prettier 
 ```
 
