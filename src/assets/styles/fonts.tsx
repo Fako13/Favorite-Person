@@ -6,7 +6,7 @@ const FontStyle = createGlobalStyle`
 	@font-face {
 		font-family: lora;
 		font-weight: 400;
-		font-style: normal;
+		font-style: normal; 
 		src: url(${LoraRegular}) format("woff");
 		font-display: swap;
 	}

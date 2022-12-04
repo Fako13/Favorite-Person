@@ -31,6 +31,19 @@
 				"functions": "never"
 			}
 		],
+		"@typescript-eslint/comma-dangle": [
+			"error",
+			{
+				"enums": "always-multiline",
+				"generics": "always-multiline",
+				"tuples": "always-multiline",
+				"functions": "always-multiline",
+				"arrays": "always-multiline",
+				"objects": "always-multiline",
+				"imports": "always-multiline",
+				"exports": "always-multiline"
+			}
+		],
 		"indent": "off",
 		"no-tabs": 0,
 		"@typescript-eslint/indent": "off"

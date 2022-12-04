@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
 		padding: 0px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		background: #000;
+		color: #fff;
 	}
 
 	code {
@@ -16,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
 	a {
 		text-decoration: none;
-		color: black;
+		color: #fff;
 	}
 
 	* {

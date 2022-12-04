@@ -1,20 +1,10 @@
+import H1 from './components/ui/H1/H1.component'
+import { H1_CLASSES } from './components/ui/H1/H1.types'
+
 const App = (): JSX.Element => {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+		<div className="">
+			<H1 H1Type={H1_CLASSES.big}>132</H1>
 		</div>
 	)
 }
