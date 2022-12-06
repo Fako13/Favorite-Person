@@ -1,10 +1,10 @@
 import { HTMLAttributes } from 'react'
 
-export enum H1_CLASSES {
-	default,
-	big,
+export enum H1_SIZE {
+	default = 'default',
+	big = 'big',
 }
 
 export type H1Props = {
-	H1Type?: H1_CLASSES
+	size?: H1_SIZE
 } & HTMLAttributes<HTMLElement>
