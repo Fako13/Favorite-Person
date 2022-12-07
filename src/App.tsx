@@ -11,7 +11,7 @@ const App = (): JSX.Element => {
 			<Button color={BUTTON_COLOR.green}>default green</Button>
 			<Button>default</Button>
 			<Button size={BUTTON_SIZE.large}>large</Button>
-			<Button size={BUTTON_SIZE.small} color={BUTTON_COLOR.green}>
+			<Button href="asd" size={BUTTON_SIZE.small} color={BUTTON_COLOR.green}>
 				small
 			</Button>
 			<P>123</P>

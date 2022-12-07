@@ -42,8 +42,7 @@ const GreenColorButton = `
 		background: ${ButtonGreenColor.pressed};
 	}
 `
-
-export const BaseButton = styled.button<ButtonProps>`
+const BaseButtonStyles = `
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -52,6 +51,22 @@ export const BaseButton = styled.button<ButtonProps>`
 	transition: 0.3s;
 	border-radius: 8px;
 	text-align: center;
+`
+
+export const BaseButton = styled.button<ButtonProps>`
+	${BaseButtonStyles}
+
+	${({ size }) =>
+		size === BUTTON_SIZE.small
+			? SmallSizeButton
+			: size === BUTTON_SIZE.large
+			? LargeSizeButton
+			: DefaultSizeButton}
+
+	${({ color }) => (color === BUTTON_COLOR.green ? GreenColorButton : DefaultColorButton)}
+`
+export const BaseLink = styled.a<ButtonProps>`
+	${BaseButtonStyles}
 
 	${({ size }) =>
 		size === BUTTON_SIZE.small

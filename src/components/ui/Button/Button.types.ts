@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes, LinkHTMLAttributes } from 'react'
 
 export enum BUTTON_SIZE {
 	default = 'default',
@@ -13,4 +13,5 @@ export enum BUTTON_COLOR {
 export type ButtonProps = {
 	size?: BUTTON_SIZE
 	color?: BUTTON_COLOR
-} & HTMLAttributes<HTMLButtonElement>
+} & HTMLAttributes<HTMLButtonElement> &
+	LinkHTMLAttributes<HTMLLinkElement>
