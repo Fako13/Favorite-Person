@@ -1,16 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import { BrowserRouter } from 'react-router-dom'
 import FontStyle from './assets/styles/fonts'
 import GlobalStyle from './assets/styles/global'
 import reportWebVitals from './reportWebVitals'
+import Router from './routes/router'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	<React.StrictMode>
-		<FontStyle />
-		<GlobalStyle />
-		<App />
+		<BrowserRouter>
+			<FontStyle />
+			<GlobalStyle />
+			<Router />
+		</BrowserRouter>
 	</React.StrictMode>
 )
 

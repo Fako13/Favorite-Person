@@ -7,6 +7,7 @@ module.exports = {
 	},
 	devServer: {
 		port: 3000,
+		historyApiFallback: true,
 	},
 	entry: './src/index.tsx',
 	module: {
