@@ -17,5 +17,5 @@
 		"noEmit": false,
 		"jsx": "react-jsx"
 	},
-	"include": ["src", "src/custom.d.ts", "src/components/ui/P/.styles.tsx"]
+	"include": ["src", "src/custom.d.ts"]
 }

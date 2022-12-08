@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { BaseP } from '../../components/ui/P/P.styles'
 
 const GlobalStyle = createGlobalStyle`
 	body { 
@@ -24,10 +23,6 @@ const GlobalStyle = createGlobalStyle`
 
 	* {
 		box-sizing: border-box;
-	}
-
-	* + ${BaseP} {
-		margin-top: 20px;
 	}
 `
 export default GlobalStyle

@@ -13,4 +13,5 @@ export const ButtonGreenColor = {
 export const TextColor = {
 	default: '#462929',
 	secondary: '#B09A81',
+	white: '#fff',
 }

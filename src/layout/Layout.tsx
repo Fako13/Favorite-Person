@@ -1,15 +1,10 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import Header from '../components/header/header.component'
 
 const Layout = (): JSX.Element => {
 	return (
 		<>
-			<header>
-				<NavLink to="ui">UI</NavLink>
-				<br></br>
-				<NavLink to="character">Персонажи</NavLink>
-				<br></br>
-				<NavLink to="/">Главная</NavLink>
-			</header>
+			<Header />
 			<main>
 				<Outlet />
 			</main>
