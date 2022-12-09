@@ -1,5 +1,5 @@
 import { DefaultH1, BigH1 } from './H1.styles'
-import { FC, memo } from 'react'
+import { FC } from 'react'
 import { H1Props, H1_SIZE } from './H1.types'
 
 const getCustomH1 = (size: H1_SIZE): typeof DefaultH1 => (size === 'big' ? BigH1 : DefaultH1)
@@ -11,4 +11,4 @@ const H1: FC<H1Props> = ({ children, size = H1_SIZE.default, ...otherProps }): J
 
 H1.displayName = 'H1'
 
-export default memo(H1)
+export default H1

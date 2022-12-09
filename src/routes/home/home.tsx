@@ -1,11 +1,7 @@
-import H1 from '../../components/ui/H1/H1.component'
+import MainBanner from '../../components/Banners/Main/MainBanner.component'
 
 const HomePage = (): JSX.Element => {
-	return (
-		<>
-			<H1>Главная страница</H1>
-		</>
-	)
+	return <MainBanner />
 }
 
 export default HomePage

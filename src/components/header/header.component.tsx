@@ -1,5 +1,5 @@
-import Logo from '../logo/logo.component'
-import { NavLink, NavContainer, NavElement, HeaderContainer } from './header.styles'
+import Logo from '../Logo/Logo.component'
+import { NavLink, NavContainer, NavElement, HeaderContainer } from './Header.styles'
 
 const Header = (): JSX.Element => {
 	return (

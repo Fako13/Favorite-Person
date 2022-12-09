@@ -1,4 +1,4 @@
-import { LogoStyle } from './logo.styles'
+import { LogoStyle } from './Logo.styles'
 import PngLogo from './logo.png'
 
 const Logo = (): JSX.Element => {

@@ -51,6 +51,7 @@ const BaseButtonStyles = `
 	transition: 0.3s;
 	border-radius: 8px;
 	text-align: center;
+	font-family: lora;
 `
 
 export const BaseButton = styled.button<ButtonProps>`
