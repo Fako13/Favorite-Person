@@ -3,10 +3,11 @@ import { BUTTON_COLOR, BUTTON_SIZE } from '../../components/ui/Button/Button.typ
 import H1 from '../../components/ui/H1/H1.component'
 import { H1_SIZE } from '../../components/ui/H1/H1.types'
 import P from '../../components/ui/P/P.component'
+import Wrapper from '../../components/ui/Wrapper/Wrapper.component'
 
 const UIPage = (): JSX.Element => {
 	return (
-		<div className="">
+		<Wrapper>
 			<H1 size={H1_SIZE.big}>Найди любимого персонажа big</H1>
 			<H1>Найди любимого персонажа default</H1>
 			<P>Найди любимого персонажа default</P>
@@ -22,7 +23,7 @@ const UIPage = (): JSX.Element => {
 			<Button href="asd" size={BUTTON_SIZE.small} color={BUTTON_COLOR.green}>
 				small
 			</Button>
-		</div>
+		</Wrapper>
 	)
 }
 

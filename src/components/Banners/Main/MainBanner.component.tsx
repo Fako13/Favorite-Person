@@ -9,8 +9,10 @@ const MainBanner = (): JSX.Element => {
 	return (
 		<BannerContainer>
 			<LoadableImage background={true} src={Logo} />
-			<Wrapper position="relative">
-				<Title size={H1_SIZE.big}>Найди любимого персонажа “Гарри Поттера”</Title>
+			<Wrapper size="xl" position="relative">
+				<Title size={H1_SIZE.big}>
+					Найди любимого персонажа <br /> “Гарри Поттера”
+				</Title>
 				<SubTitle size={24}>
 					Вы сможете узнать тип героев, их <br /> способности, сильные стороны и недостатки.
 				</SubTitle>
