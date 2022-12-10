@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { TextColor } from '../../assets/styles/colors'
 import P from '../ui/P/P.component'
@@ -10,10 +10,14 @@ export const NavContainer = styled.nav`
 `
 export const NavElement = styled(P)``
 
-export const NavLink = styled(Link)`
+export const NavLinkTo = styled(NavLink)`
 	color: ${TextColor.secondary};
 	transition: 0.3s;
 	&:hover {
+		color: ${TextColor.white};
+	}
+
+	&.active {
 		color: ${TextColor.white};
 	}
 `

@@ -1,4 +1,9 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+interface LoadableImageContainerProps {
+	loading: boolean
+	background?: boolean
+}
 
 const load = keyframes`
   from {
@@ -8,8 +13,29 @@ const load = keyframes`
       left: 100%;
   }
 `
+const LoadableImageContainerLoading = `
+  &::before {
+		animation: none;
+	}
+`
+export const LoadableImageStyle = styled.img`
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+`
+const LoadableImageContainerBackground = `
+  width:100%;
+  left:0;
+  top:0;
+  height:100%;
+  position:absolute;
+  ${LoadableImageStyle} {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+`
 
-export const LoadableImageContainer = styled.div`
+export const LoadableImageContainer = styled.div<LoadableImageContainerProps>`
 	box-sizing: border-box;
 	overflow: hidden;
 	position: relative;
@@ -27,13 +53,15 @@ export const LoadableImageContainer = styled.div`
 	&.containerLoaded::before {
 		animation: none;
 	}
-`
 
-export const LoadableImageStyle = styled.img`
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-
-	&.imageLoaded {
-		opacity: 1;
-	}
+	${({ loading }) => loading && LoadableImageContainerLoading}
+	${({ loading }) =>
+		loading &&
+		css`
+			${LoadableImageStyle} {
+				opacity: 1;
+			}
+		`}
+  
+  ${({ background }) => (background ?? false) && LoadableImageContainerBackground}
 `

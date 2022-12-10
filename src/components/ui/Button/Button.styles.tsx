@@ -1,28 +1,28 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ButtonProps, BUTTON_SIZE, BUTTON_COLOR } from './Button.types'
 import { ButtonDefaultColor, ButtonGreenColor, TextColor } from '../../../assets/styles/colors'
 
-const DefaultSizeButton = `
+export const DefaultSizeButton = `
 	font-size: 18px;
 	min-width: 140px;
 	padding: 0 20px;
 	height: 55px;
 
 `
-const SmallSizeButton = `
+export const SmallSizeButton = `
 	font-size: 14px;
 	min-width: 85px;
 	padding: 0 20px;
 	height: 30px;
 `
-const LargeSizeButton = `
+export const LargeSizeButton = `
 	font-size: 20px;
 	min-width: 180px;
 	padding: 0 20px;
 	height: 60px;
 `
 
-const DefaultColorButton = `
+export const DefaultColorButton = `
 	background: ${ButtonDefaultColor.default};
 	color: ${TextColor.default};
 	&:hover {
@@ -32,7 +32,7 @@ const DefaultColorButton = `
 		background: ${ButtonDefaultColor.pressed};
 	}
 `
-const GreenColorButton = `
+export const GreenColorButton = `
 	background: ${ButtonGreenColor.default};
 	color: ${TextColor.secondary};
 	&:hover {
@@ -42,7 +42,7 @@ const GreenColorButton = `
 		background: ${ButtonGreenColor.pressed};
 	}
 `
-const BaseButtonStyles = `
+export const BaseButtonStyles = `
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -54,7 +54,7 @@ const BaseButtonStyles = `
 	font-family: lora;
 `
 
-export const BaseButton = styled.button<ButtonProps>`
+export const BaseButtonSizeAndColor = css<ButtonProps>`
 	${BaseButtonStyles}
 
 	${({ size }) =>
@@ -66,15 +66,10 @@ export const BaseButton = styled.button<ButtonProps>`
 
 	${({ color }) => (color === BUTTON_COLOR.green ? GreenColorButton : DefaultColorButton)}
 `
-export const BaseLink = styled.a<ButtonProps>`
-	${BaseButtonStyles}
 
-	${({ size }) =>
-		size === BUTTON_SIZE.small
-			? SmallSizeButton
-			: size === BUTTON_SIZE.large
-			? LargeSizeButton
-			: DefaultSizeButton}
-
-	${({ color }) => (color === BUTTON_COLOR.green ? GreenColorButton : DefaultColorButton)}
+export const BaseButton = styled.button`
+	${BaseButtonSizeAndColor}
+`
+export const BaseLink = styled.a`
+	${BaseButtonSizeAndColor}
 `

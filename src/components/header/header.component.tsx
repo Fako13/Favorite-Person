@@ -1,5 +1,5 @@
 import Logo from '../Logo/Logo.component'
-import { NavLink, NavContainer, NavElement, HeaderContainer } from './Header.styles'
+import { NavLinkTo, NavContainer, NavElement, HeaderContainer } from './Header.styles'
 
 const Header = (): JSX.Element => {
 	return (
@@ -7,13 +7,22 @@ const Header = (): JSX.Element => {
 			<Logo />
 			<NavContainer>
 				<NavElement>
-					<NavLink to="/">Главная</NavLink>
+					<NavLinkTo to="/" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+						Главная
+					</NavLinkTo>
 				</NavElement>
 				<NavElement>
-					<NavLink to="/character">Персонажи</NavLink>
+					<NavLinkTo
+						to="/character"
+						className={({ isActive }) => (isActive ? 'active' : undefined)}
+					>
+						Персонажи
+					</NavLinkTo>
 				</NavElement>
 				<NavElement>
-					<NavLink to="/ui">UI</NavLink>
+					<NavLinkTo to="/ui" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+						UI
+					</NavLinkTo>
 				</NavElement>
 			</NavContainer>
 		</HeaderContainer>

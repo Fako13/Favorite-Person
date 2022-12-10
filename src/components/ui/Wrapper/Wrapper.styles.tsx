@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { WrapperProps } from './Wrapper.types'
 import { device } from '../../../assets/styles/media'
 
@@ -17,6 +17,19 @@ export const BaseWrapper = styled.div<WrapperProps>`
 	width: 100%;
 
 	${({ size }) => (size === 'xl' ? ContainerXL : ContainerL)}
+
+	${({ position }) =>
+		position === 'relative'
+			? css`
+					position: relative;
+			  `
+			: position === 'absolute'
+			? css`
+					position: absolute;
+			  `
+			: css`
+					position: static;
+			  `}
 
 	@media ${device.laptop} {
 		padding: 0 30px;

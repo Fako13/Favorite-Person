@@ -6,13 +6,12 @@ const Button: FC<ButtonProps> = ({
 	children,
 	size = BUTTON_SIZE.default,
 	color = BUTTON_COLOR.default,
+	href,
 	...otherProps
 }): JSX.Element => {
-	const Tag = (
-		otherProps.href !== undefined && otherProps.href.length > 0 ? BaseLink : BaseButton
-	) as React.ElementType
+	const Tag = (href !== undefined && href.length > 0 ? BaseLink : BaseButton) as React.ElementType
 	return (
-		<Tag size={size} color={color} {...otherProps}>
+		<Tag size={size} href={href} color={color} {...otherProps}>
 			{children}
 		</Tag>
 	)

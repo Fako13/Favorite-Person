@@ -1,11 +1,10 @@
 import { FC, useState, useRef, useEffect } from 'react'
 import { LoadableImageContainer, LoadableImageStyle } from './LoadableImage.styles'
-// import cn from 'classnames'
 import { ILoadableImageTypes } from './LoadableImage.types'
 import useOnScreen from '../../hooks/use-one-screen'
 
 const LoadableImage: FC<ILoadableImageTypes> = (props): JSX.Element => {
-	const { src, alt = '', onLoad = () => {} } = props
+	const { src, alt = '', onLoad = () => {}, background = false } = props
 	const [isLoaded, setIsLoaded] = useState(false)
 	const imageRef = useRef<HTMLImageElement | null>(null)
 	const containerRef = useRef<HTMLDivElement | null>(null)
@@ -24,17 +23,12 @@ const LoadableImage: FC<ILoadableImageTypes> = (props): JSX.Element => {
 	}, [isVisible, onLoad, isLoaded])
 
 	return (
-		<LoadableImageContainer ref={containerRef} className={isLoaded ? 'containerLoaded' : ''}>
-			{(isVisible || isLoaded) && (
-				<LoadableImageStyle
-					ref={imageRef}
-					className={isLoaded ? 'imageLoaded' : ''}
-					src={src}
-					alt={alt}
-				/>
-			)}
+		<LoadableImageContainer background={background} ref={containerRef} loading={isLoaded}>
+			{(isVisible || isLoaded) && <LoadableImageStyle ref={imageRef} src={src} alt={alt} />}
 		</LoadableImageContainer>
 	)
 }
+
+LoadableImage.displayName = 'LoadableImage'
 
 export default LoadableImage

@@ -10,8 +10,11 @@ export enum BUTTON_COLOR {
 	green = 'green',
 }
 
-export type ButtonProps = {
+export interface ButtonBaseProps {
 	size?: BUTTON_SIZE
 	color?: BUTTON_COLOR
-} & HTMLAttributes<HTMLButtonElement> &
+}
+
+export type ButtonProps = {} & ButtonBaseProps &
+	HTMLAttributes<HTMLButtonElement> &
 	LinkHTMLAttributes<HTMLLinkElement>

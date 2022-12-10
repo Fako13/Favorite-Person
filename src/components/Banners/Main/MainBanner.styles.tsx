@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import LoadableImage from '../../LoadableImage/LoadableImage.component'
-import Button from '../../ui/Button/Button.component'
+import ButtonNavigate from '../../ui/ButtonNavigate/ButtonNavigate.component'
 import H1 from '../../ui/H1/H1.component'
 import P from '../../ui/P/P.component'
 
@@ -18,7 +18,7 @@ export const SubTitle = styled(P)`
 	margin: 65px 0;
 	line-height: 1.3;
 `
-export const ButtonLink = styled(Button)``
+export const ButtonLink = styled(ButtonNavigate)``
 
 export const Background = styled(LoadableImage)`
 	object-fit: cover;
