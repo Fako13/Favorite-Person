@@ -7,22 +7,13 @@ const Header = (): JSX.Element => {
 			<Logo />
 			<NavContainer>
 				<NavElement>
-					<NavLinkTo to="/" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-						Главная
-					</NavLinkTo>
+					<NavLinkTo to="/">Главная</NavLinkTo>
 				</NavElement>
 				<NavElement>
-					<NavLinkTo
-						to="/character"
-						className={({ isActive }) => (isActive ? 'active' : undefined)}
-					>
-						Персонажи
-					</NavLinkTo>
+					<NavLinkTo to="/character">Персонажи</NavLinkTo>
 				</NavElement>
 				<NavElement>
-					<NavLinkTo to="/ui" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-						UI
-					</NavLinkTo>
+					<NavLinkTo to="/ui">UI</NavLinkTo>
 				</NavElement>
 			</NavContainer>
 		</HeaderContainer>

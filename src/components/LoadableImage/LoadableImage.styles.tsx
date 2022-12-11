@@ -20,6 +20,8 @@ const LoadableImageContainerLoading = `
 `
 export const LoadableImageStyle = styled.img`
 	opacity: 0;
+	max-width: 100%;
+	display: block;
 	transition: opacity 0.3s ease-in-out;
 `
 const LoadableImageContainerBackground = `
