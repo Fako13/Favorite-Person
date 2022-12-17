@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
 	output: {
 		path: path.join(__dirname, '/dist'),
@@ -13,6 +14,10 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader'],
+			},
+			{
 				test: /\.(js)?$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
@@ -23,9 +28,20 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.(png|woff|woff2|eot|ttf|svg|ico|json)$/, // to import images and fonts
+				test: /\.(png|woff|woff2|eot|ttf|ico|json)$/, // to import images and fonts
 				loader: 'url-loader',
 				options: { limit: false },
+			},
+			{
+				test: /\.svg$/i,
+				type: 'asset',
+				resourceQuery: /url/, // *.svg?url
+			},
+			{
+				test: /\.svg$/i,
+				issuer: /\.[jt]sx?$/,
+				resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
+				use: ['@svgr/webpack'],
 			},
 		],
 	},

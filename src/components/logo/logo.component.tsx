@@ -1,11 +1,11 @@
-import { LogoStyle } from './Logo.styles'
+import { LogoLink } from './Logo.styles'
 import PngLogo from './logo.png'
 
 const Logo = (): JSX.Element => {
 	return (
-		<LogoStyle to="/">
+		<LogoLink to="/">
 			<img src={PngLogo}></img>
-		</LogoStyle>
+		</LogoLink>
 	)
 }
 
