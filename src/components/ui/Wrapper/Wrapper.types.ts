@@ -1,6 +1,6 @@
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react';
 
 export type WrapperProps = {
-	size?: 'xl' | 'l'
-	position?: 'relative' | 'absolute'
-} & HTMLAttributes<HTMLDivElement>
+  size?: 'xl' | 'l';
+  position?: 'relative' | 'absolute';
+} & HTMLAttributes<HTMLDivElement>;

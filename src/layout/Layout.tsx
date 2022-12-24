@@ -1,16 +1,13 @@
-import { Outlet } from 'react-router-dom'
-import Header from '../components/Header/Header.component'
-import { LayoutContainer } from './Layout.styles'
+import { ReactNode } from 'react';
 
-const Layout = (): JSX.Element => {
-	return (
-		<LayoutContainer>
-			<Header />
-			<main>
-				<Outlet />
-			</main>
-		</LayoutContainer>
-	)
-}
+import Header from '../components/base/Header/Header.component';
+import styles from './Layout.module.scss';
 
-export default Layout
+const Layout = ({ children }: { children?: ReactNode }): JSX.Element => (
+  <div className={styles.layout}>
+    <Header />
+    <main>{children}</main>
+  </div>
+);
+
+export default Layout;

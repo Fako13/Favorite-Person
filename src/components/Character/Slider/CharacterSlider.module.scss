@@ -1,0 +1,48 @@
+@import '@/styles/base/colors';
+
+.container {
+  position: relative;
+}
+.pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 45px;
+}
+
+.bullet {
+  height: 10px;
+  display: block;
+  cursor: pointer;
+  width: 10px;
+  background: $white;
+  border-radius: 50%;
+}
+.bulletActive {
+  background: $secondary;
+}
+.navigationContainer {
+  position: relative;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 40px;
+}
+
+@mixin sliderArrow {
+  height: 24.092px;
+  width: 12.046px;
+  cursor: pointer;
+  &:hover path {
+    stroke: $white;
+  }
+}
+.arrowLeft {
+  @include sliderArrow;
+}
+.arrowRight {
+  @include sliderArrow;
+  transform: rotate(-180deg);
+}

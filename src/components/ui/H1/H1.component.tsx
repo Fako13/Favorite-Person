@@ -1,14 +1,14 @@
-import { DefaultH1, BigH1 } from './H1.styles'
-import { FC } from 'react'
-import { H1Props, H1_SIZE } from './H1.types'
+import { FC } from 'react';
 
-const getCustomH1 = (size: H1_SIZE): typeof DefaultH1 => (size === 'big' ? BigH1 : DefaultH1)
+import styles from './H1.module.scss';
+import { H1_SIZE, H1Props } from './H1.types';
 
-const H1: FC<H1Props> = ({ children, size = H1_SIZE.default, ...otherProps }): JSX.Element => {
-	const CustomH1 = getCustomH1(size)
-	return <CustomH1 {...otherProps}>{children}</CustomH1>
-}
+const H1: FC<H1Props> = ({ className, children, size = H1_SIZE.default, ...otherProps }): JSX.Element => (
+  <h1 className={`${className} ${size === H1_SIZE.big ? styles.bigH1 : styles.defaultH1}`} {...otherProps}>
+    {children}
+  </h1>
+);
 
-H1.displayName = 'H1'
+H1.displayName = 'H1';
 
-export default H1
+export default H1;

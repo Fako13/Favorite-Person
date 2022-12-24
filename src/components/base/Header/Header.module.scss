@@ -1,0 +1,36 @@
+@import '@/styles/base/colors';
+@import '@/styles/base/breakpoints';
+@import '@/styles/base/mixins';
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px 33px;
+
+  @include breakpoint(xs, down) {
+    gap: 10px 15px;
+  }
+}
+
+.navLink {
+  color: $secondary;
+  transition: 0.3s;
+  &:hover {
+    color: $white;
+  }
+
+  &.navLinkActive {
+    color: $white;
+  }
+}
+
+.navLinkActive {
+  color: $white;
+}
+
+.headerContainer {
+  display: grid;
+  grid-template-columns: 129px auto;
+  gap: 10px 52px;
+  padding: 15px 40px;
+}

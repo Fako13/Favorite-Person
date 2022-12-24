@@ -1,20 +1,20 @@
-import { HTMLAttributes, LinkHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 export enum BUTTON_SIZE {
-	default = 'default',
-	small = 'small',
-	large = 'large',
+  default = 'default',
+  small = 'small',
+  large = 'large',
 }
 export enum BUTTON_COLOR {
-	default = 'default',
-	green = 'green',
+  default = 'default',
+  green = 'green',
 }
 
 export interface ButtonBaseProps {
-	size?: BUTTON_SIZE
-	color?: BUTTON_COLOR
+  Size?: BUTTON_SIZE;
+  Color?: BUTTON_COLOR;
 }
 
-export type ButtonProps = {} & ButtonBaseProps &
-	HTMLAttributes<HTMLButtonElement> &
-	LinkHTMLAttributes<HTMLLinkElement>
+export interface ButtonProps
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+    ButtonBaseProps {}
