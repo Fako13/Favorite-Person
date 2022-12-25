@@ -5,9 +5,9 @@ import styles from './Logo.module.scss';
 import PngLogo from './logo.png';
 
 const Logo = (): JSX.Element => (
-  <Link className={styles.logoLink} href="/" passHref>
-    <a>
-      <Image alt="" src={PngLogo}></Image>
+  <Link href="/" passHref>
+    <a className={styles.logoLink}>
+      <Image alt="" sizes="100%" objectPosition="relative" objectFit="contain" src={PngLogo}></Image>
     </a>
   </Link>
 );

@@ -4,12 +4,12 @@
 
 .defaultH1 {
   @include baseH1();
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.67;
 }
 
 .bigH1 {
   @include baseH1();
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1.11;
 }

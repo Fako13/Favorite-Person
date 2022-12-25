@@ -8,14 +8,14 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px 45px;
+  gap: 0.625rem 2.8125rem;
 }
 
 .bullet {
-  height: 10px;
+  height: 0.625rem;
   display: block;
   cursor: pointer;
-  width: 10px;
+  width: 0.625rem;
   background: $white;
   border-radius: 50%;
 }
@@ -24,16 +24,16 @@
 }
 .navigationContainer {
   position: relative;
-  margin-top: 65px;
+  margin-top: 4.0625rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0 40px;
+  gap: 0 2.5rem;
 }
 
 @mixin sliderArrow {
-  height: 24.092px;
-  width: 12.046px;
+  height: 1.5rem;
+  width: 0.75rem;
   cursor: pointer;
   &:hover path {
     stroke: $white;

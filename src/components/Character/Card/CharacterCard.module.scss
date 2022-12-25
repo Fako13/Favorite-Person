@@ -9,32 +9,29 @@
   position: relative;
   overflow: hidden;
   background: #000;
-  min-height: 395px;
+  min-height: 24.6875rem;
 }
 .title {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem;
   white-space: pre-line;
-  line-height: 1.39;
+  line-height: 1.4;
   position: absolute;
   margin: 0;
-  left: 13px;
-  // color: ${({ color }) => color};
-  bottom: 21px;
+  left: 0.8125rem;
+  bottom: 1.3125rem;
 }
 .body {
-  // background: ${({ background }) => background};
-  // color: ${({ color }) => color};
-  font-size: 18px;
-  padding: 20px 15px;
+  font-size: 1.125rem;
+  padding: 1.25rem 0.9375rem;
 }
 
 .bodyElement {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.625rem;
   flex-wrap: wrap;
-  padding: 7px 0;
+  padding: 0.4375rem 0;
 
   & + & {
     border-top: 1px solid #fff;

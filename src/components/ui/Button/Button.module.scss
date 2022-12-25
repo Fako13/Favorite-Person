@@ -1,22 +1,22 @@
 @import '@/styles/base/colors';
 
 @mixin DefaultSizeButton {
-  font-size: 18px;
-  min-width: 140px;
-  padding: 0 20px;
-  height: 55px;
+  font-size: 1.125rem;
+  min-width: 8.75rem;
+  padding: 0 1.25rem;
+  height: 3.4375rem;
 }
 @mixin SmallSizeButton {
-  font-size: 14px;
-  min-width: 85px;
-  padding: 0 20px;
-  height: 30px;
+  font-size: 0.875rem;
+  min-width: 5.3125rem;
+  padding: 0 1.25rem;
+  height: 1.875rem;
 }
 @mixin LargeSizeButton {
-  font-size: 20px;
-  min-width: 180px;
-  padding: 0 20px;
-  height: 60px;
+  font-size: 1.25rem;
+  min-width: 11.25rem;
+  padding: 0 1.25rem;
+  height: 3.75rem;
 }
 
 @mixin DefaultColorButton {
