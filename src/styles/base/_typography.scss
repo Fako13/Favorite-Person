@@ -1,0 +1,24 @@
+@import 'breakpoints';
+
+$lora: 'Lora';
+
+@font-face {
+  font-family: $lora;
+  font-weight: 400;
+  src: url('../../assets//fonts/Lora-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $lora;
+  font-weight: 500;
+  src: url('../../assets//fonts/Lora-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $lora;
+  font-weight: 700;
+  src: url('../../assets//fonts/Lora-Bold.woff') format('woff');
+  font-display: swap;
+}

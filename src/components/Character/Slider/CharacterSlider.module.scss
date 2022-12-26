@@ -1,0 +1,48 @@
+@import '@/styles/base/colors';
+
+.container {
+  position: relative;
+}
+.pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.625rem 2.8125rem;
+}
+
+.bullet {
+  height: 0.625rem;
+  display: block;
+  cursor: pointer;
+  width: 0.625rem;
+  background: $white;
+  border-radius: 50%;
+}
+.bulletActive {
+  background: $secondary;
+}
+.navigationContainer {
+  position: relative;
+  margin-top: 4.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 2.5rem;
+}
+
+@mixin sliderArrow {
+  height: 1.5rem;
+  width: 0.75rem;
+  cursor: pointer;
+  &:hover path {
+    stroke: $white;
+  }
+}
+.arrowLeft {
+  @include sliderArrow;
+}
+.arrowRight {
+  @include sliderArrow;
+  transform: rotate(-180deg);
+}

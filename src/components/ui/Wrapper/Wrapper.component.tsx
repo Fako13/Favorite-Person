@@ -1,15 +1,19 @@
-import { BaseWrapper } from './Wrapper.styles'
-import { FC } from 'react'
-import { WrapperProps } from './Wrapper.types'
+import { FC } from 'react';
 
-const Wrapper: FC<WrapperProps> = ({ children, size, ...otherProps }): JSX.Element => {
-	return (
-		<BaseWrapper size={size} {...otherProps}>
-			{children}
-		</BaseWrapper>
-	)
-}
+import styles from './Wrapper.module.scss';
+import { WrapperProps } from './Wrapper.types';
 
-Wrapper.displayName = 'Wrapper'
+const Wrapper: FC<WrapperProps> = ({ children, position, className, size, ...otherProps }): JSX.Element => (
+  <div
+    className={`${size === 'xl' ? styles.xl : styles.l} ${
+      position === 'absolute' ? 'absolute' : position === 'relative' ? 'relative' : ''
+    } ${className ? className : ''} ${styles.base}`}
+    {...otherProps}
+  >
+    {children}
+  </div>
+);
 
-export default Wrapper
+Wrapper.displayName = 'Wrapper';
+
+export default Wrapper;

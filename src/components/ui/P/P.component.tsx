@@ -1,15 +1,13 @@
-import { BaseP } from './P.styles'
-import { FC } from 'react'
-import { PProps } from './P.types'
+import { FC } from 'react';
 
-const P: FC<PProps> = ({ children, size, ...otherProps }): JSX.Element => {
-	return (
-		<BaseP size={size} {...otherProps}>
-			{children}
-		</BaseP>
-	)
-}
+import { PProps } from './P.types';
 
-P.displayName = 'P'
+const P: FC<PProps> = ({ children, className, size, ...otherProps }): JSX.Element => (
+  <p className={`${size ? 'font-size-' + size : 'font-size-16'} ${className ? className : ''}`} {...otherProps}>
+    {children}
+  </p>
+);
 
-export default P
+P.displayName = 'P';
+
+export default P;

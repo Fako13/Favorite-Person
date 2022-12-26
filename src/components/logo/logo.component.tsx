@@ -1,12 +1,15 @@
-import { LogoStyle } from './Logo.styles'
-import PngLogo from './logo.png'
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Logo = (): JSX.Element => {
-	return (
-		<LogoStyle to="/">
-			<img src={PngLogo}></img>
-		</LogoStyle>
-	)
-}
+import styles from './Logo.module.scss';
+import PngLogo from './logo.png';
 
-export default Logo
+const Logo = (): JSX.Element => (
+  <Link href="/" passHref>
+    <a className={styles.logoLink}>
+      <Image alt="" sizes="100%" objectPosition="relative" objectFit="contain" src={PngLogo}></Image>
+    </a>
+  </Link>
+);
+
+export default Logo;

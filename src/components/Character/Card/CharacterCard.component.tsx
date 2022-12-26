@@ -1,46 +1,40 @@
-import { FC } from 'react'
-import { Character } from '../../../services/types/Character'
-import LoadableImage from '../../LoadableImage/LoadableImage.component'
-import { Body, Card, Header, Title, BodyElement } from './CharacterCard.styles'
+import Image from 'next/image';
+import { FC } from 'react';
+
+import { Character } from '../../../services/types/Character';
+import styles from './CharacterCard.module.scss';
 
 interface CharacterCardType {
-	character: Character
+  character: Character;
 }
 
 const CharacterCard: FC<CharacterCardType> = ({ character }): JSX.Element => {
-	const {
-		name,
-		nameHtml,
-		gender,
-		species,
-		side,
-		photo,
-		colorName,
-		colorBackgroundParametrs,
-		colorParametrs,
-	} = character
-	return (
-		<Card>
-			<Header>
-				{photo != null && photo.length > 0 && <LoadableImage src={photo} />}
-				<Title color={colorName}>{nameHtml.length > 0 ? nameHtml : name}</Title>
-			</Header>
-			<Body background={colorBackgroundParametrs} color={colorParametrs}>
-				<BodyElement>
-					<span>Пол</span>
-					<span>{gender}</span>
-				</BodyElement>
-				<BodyElement>
-					<span>Раса</span>
-					<span>{species}</span>
-				</BodyElement>
-				<BodyElement>
-					<span>Сторона</span>
-					<span>{side}</span>
-				</BodyElement>
-			</Body>
-		</Card>
-	)
-}
+  const { name, nameHtml, gender, species, side, photo, colorName, colorBackgroundParametrs, colorParametrs } =
+    character;
+  return (
+    <div className={styles.card}>
+      <div className={styles.header}>
+        {photo != null && photo.length > 0 && <Image alt="photo" layout="fill" src={photo} />}
+        <h2 className={styles.title} style={{ color: colorName }}>
+          {nameHtml.length > 0 ? nameHtml : name}
+        </h2>
+      </div>
+      <div className={`${styles.body}`} style={{ background: colorBackgroundParametrs, color: colorParametrs }}>
+        <div className={styles.bodyElement}>
+          <span>Пол</span>
+          <span>{gender}</span>
+        </div>
+        <div className={styles.bodyElement}>
+          <span>Раса</span>
+          <span>{species}</span>
+        </div>
+        <div className={styles.bodyElement}>
+          <span>Сторона</span>
+          <span>{side}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default CharacterCard
+export default CharacterCard;

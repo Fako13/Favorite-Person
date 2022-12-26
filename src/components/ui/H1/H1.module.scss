@@ -1,0 +1,15 @@
+@mixin baseH1 {
+  font-weight: 700;
+}
+
+.defaultH1 {
+  @include baseH1();
+  font-size: 3rem;
+  line-height: 1.67;
+}
+
+.bigH1 {
+  @include baseH1();
+  font-size: 4.5rem;
+  line-height: 1.11;
+}
